@@ -64,11 +64,10 @@ int main ( int argc, char** argv )
         if ( matches[i].distance <= max ( 2*min_dist, 30.0 ) ) // 30 empirical value
         {
             good_matches.push_back ( matches[i] );
-            cout <<1;
         }
     }
 
-    //-- 第五步:绘制匹配结果
+    // draw
     Mat img_match;
     Mat img_goodmatch;
     drawMatches ( img_1, keypoints_1, img_2, keypoints_2, matches, img_match );
